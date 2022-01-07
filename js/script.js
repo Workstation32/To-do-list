@@ -1,7 +1,6 @@
 const boton = document.querySelector("#boton");
 const lista = document.getElementById("lista");
-
-console.log(texto)
+const item = document.querySelector("ul")
 
 function insertar (){
     let texto = document.getElementById("texto").value;
@@ -13,3 +12,11 @@ function insertar (){
 
 boton.addEventListener('click', insertar);
 
+
+function marcar() {
+    const listado = document.querySelector("li")
+    listado.setAtribute('class', "marcar")
+
+}
+
+item.addEventListener("click",marcar)
