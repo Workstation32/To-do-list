@@ -67,11 +67,5 @@ document.addEventListener("DOMContentLoaded", () => {
       contenedor_Tareas.appendChild(li);
     }
   };
+  console.log(tareas)
 });
-
-function marcar() {
-  const listado = document.querySelector("li");
-  listado.setAtribute("class", "marcar");
-}
-
-item.addEventListener("click", marcar);
