@@ -1,7 +1,6 @@
-
 document.addEventListener("DOMContentLoaded", () => {
-  let tareas = []; // El arreglo global que vamos a manejar
-  // Declaración de elementos del DOM
+  let tareas = [];
+
   const contenedor_Tareas = document.querySelector("#contenedorTareas"),
     btn_Guardar_Tarea = document.querySelector("#btnAgregarTarea"),
     Nueva_Tarea = document.querySelector("#NuevaTarea");
@@ -16,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
       tarea: tarea,
       terminada: false,
     });
-    Nueva_Tarea.value = "";
 
     refrescarListaDeTareas();
   };
@@ -33,7 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
       eliminar.onclick = (evento) => {
         evento.preventDefault();
 
-
         if (!confirm("¿Eliminar tarea?")) {
           return;
         }
@@ -44,7 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const checkbox = document.createElement("input");
       checkbox.type = "checkbox";
       checkbox.onchange = function () {
-        // No es una función flecha porque quiero acceder al elemento a través de this
         if (this.checked) {
           tareas[indice].terminada = true;
         } else {
@@ -74,10 +70,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function marcar() {
-    const listado = document.querySelector("li")
-    listado.setAtribute('class', "marcar")
-
+  const listado = document.querySelector("li");
+  listado.setAtribute("class", "marcar");
 }
 
-item.addEventListener("click",marcar)
-
+item.addEventListener("click", marcar);
