@@ -12,16 +12,21 @@
     <title>To Do List</title>
   </head>
   <body>
-    <h1>
-      To Do List
-      <i class="fas fa-pencil-alt"></i>
-    </h1>
 
-    <ul id="lista"></ul>
-    <form action="send.php">
-      <input id="texto" type="text" />
-    </form>
-    <button id="boton">Add New</button>
+    <div class="to_do_list">
+      <h2>To Do List <i class="fas fa-pencil-alt"></i></h2>
+      <ul id="contenedorTareas"></ul>
+
+      
+
+      <div class="footer">
+        <label for="inputNuevaTarea">Agregar nueva tarea: </label>
+        <div>
+          <input type="text" id="NuevaTarea" />
+          <button id="btnAgregarTarea">Add New</button>
+        </div>
+      </div>
+    </div>
 
     <script src="js/script.js"></script>
   </body>
