@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
   let tareas = []; // El arreglo global que vamos a manejar
   // Declaración de elementos del DOM
@@ -31,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
       eliminar.href = "";
       eliminar.onclick = (evento) => {
         evento.preventDefault();
+
 
         if (!confirm("¿Eliminar tarea?")) {
           return;
@@ -70,3 +72,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 });
+
+function marcar() {
+    const listado = document.querySelector("li")
+    listado.setAtribute('class', "marcar")
+
+}
+
+item.addEventListener("click",marcar)
+
